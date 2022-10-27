@@ -1,6 +1,6 @@
 package Locadora;
 
-public abstract class Dvd extends Midia {
+public class Dvd extends Midia {
     private Midia midia;
 
     private String idioma;
