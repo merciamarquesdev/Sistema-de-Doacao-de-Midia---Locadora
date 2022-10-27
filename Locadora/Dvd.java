@@ -3,15 +3,15 @@ package Locadora;
 public class Dvd extends Midia {
     private Midia midia;
 
-    private String idioma;
+    private Idioma idioma;
     private boolean possuiLegenda;
-    private String idiomaLegenda;
+    private IdiomaLegenda idiomaLegenda;
 
     public void darPlay(){
         System.out.println("Filme iniciado!");
     }
 
-    public Dvd(Midia midia, String idioma, boolean possuiLegenda, String idiomaLegenda) {
+    public Dvd(Midia midia, Idioma idioma, boolean possuiLegenda, IdiomaLegenda idiomaLegenda) {
         super(midia.getCodigo(), midia.getPreco(), midia.getNome());
         this.idioma = idioma;
         this.possuiLegenda = possuiLegenda;
@@ -26,11 +26,11 @@ public class Dvd extends Midia {
         this.midia = midia;
     }
 
-    public String getIdioma() {
+    public Idioma getIdioma() {
         return idioma;
     }
 
-    public void setIdioma(String idioma) {
+    public void setIdioma(Idioma idioma) {
         this.idioma = idioma;
     }
 
@@ -42,17 +42,17 @@ public class Dvd extends Midia {
         this.possuiLegenda = possuiLegenda;
     }
 
-    public String getIdiomaLegenda() {
+    public IdiomaLegenda getIdiomaLegenda() {
         return idiomaLegenda;
     }
 
-    public void setIdiomaLegenda(String idiomaLegenda) {
+    public void setIdiomaLegenda(IdiomaLegenda idiomaLegenda) {
         this.idiomaLegenda = idiomaLegenda;
     }
 
-    public void legenda(boolean ligar, String idioma){
+    public void legenda(boolean ligar, IdiomaLegenda idiomaLegenda){
         setPossuiLegenda(ligar);
-        setIdiomaLegenda(idioma);
+        setIdiomaLegenda(idiomaLegenda);
     }
 
     public void legenda(boolean ligarDesligar){
