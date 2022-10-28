@@ -14,12 +14,14 @@ public class DoacaoMidia {
         Dvd dvd4 = new Dvd("F31082012", 33.50, "Intocáveis", Idioma.FRANCES, true, IdiomaLegenda.ESPANHOL);
         Dvd dvd5 = new Dvd("A23102014", 19.90, "Relatos Selvagens", Idioma.ESPANHOL, true, IdiomaLegenda.PORTUGUES);
         Dvd dvd6 = new Dvd("C07112019", 43.0, "Parasita", Idioma.COREANO, true, IdiomaLegenda.PORTUGUES);
+        Cd cd1 = new Cd("CCD2022BTS", 80.20, "Proof", "BTS", 35);
+        Cd cd2 = new Cd("ECD2022BEY", 45.50, "Renaissance", "Beyoncé", 16);
 
-        Random dvdAleatorio = new Random();
+        Random midiaAleatoria = new Random();
 
-        int dvdEscolhido = dvdAleatorio.nextInt(6);
+        int midiaEscolhida = midiaAleatoria.nextInt(8);
 
-        switch (dvdEscolhido) {
+        switch (midiaEscolhida) {
             case 0:
                 return dvd1;
 
@@ -35,8 +37,14 @@ public class DoacaoMidia {
             case 4:
                 return dvd5;
 
-            default:
+            case 5:
                 return dvd6;
+
+            case 6:
+                return cd1;
+
+            default:
+                return cd2;
         }
 
     }
@@ -57,7 +65,7 @@ public class DoacaoMidia {
 
 
         Midia midiaDoacao = pegarMidiaAleatoria();
-        System.out.println("O filme escolhido é " + midiaDoacao);
+        System.out.println("A mídia escolhida é " + midiaDoacao);
         midiaDoacao.darPlay();
 
     }
