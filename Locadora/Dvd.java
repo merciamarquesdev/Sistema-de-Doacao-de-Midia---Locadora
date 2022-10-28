@@ -47,18 +47,20 @@ public class Dvd extends Midia {
     }
 
     public void legenda(boolean ligar, IdiomaLegenda idiomaLegenda){
-        setPossuiLegenda(ligar);
-        setIdiomaLegenda(idiomaLegenda);
         if (!possuiLegenda){
             System.out.println("Este filme não tem legenda!");
         }
+        setPossuiLegenda(ligar);
+        setIdiomaLegenda(idiomaLegenda);
+        
     }
 
     public void legenda(boolean ligarDesligar){
-        setPossuiLegenda(ligarDesligar);
         if (!possuiLegenda) {
             System.out.println("Este filme não tem legenda!");
         }
+        setPossuiLegenda(ligarDesligar);
+   
     }
 
     @Override
