@@ -14,9 +14,10 @@ public class Midia {
         this.nome = nome;
     }
 
-    public Midia(){
-
-    }
+    //COMENTANDO PORQUE NAO ENTENDI O USO:
+//    public Midia(){
+//
+//    }
 
     public String getCodigo() {
         return codigo;
@@ -40,5 +41,10 @@ public class Midia {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return nome ;
     }
 }

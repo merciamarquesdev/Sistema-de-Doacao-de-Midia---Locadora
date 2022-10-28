@@ -1,7 +1,11 @@
 package Locadora;
+// Criar classe Filha chamada Dvd
+//
+//        * Atributos:
+//        - idioma : String ----- TRANSFORMEI EM ENUM
 
+//        - idiomaLegenda : String ------- TRANSFORMEI EM ENUM
 public class Dvd extends Midia {
-    private Midia midia;
 
     private Idioma idioma;
     private boolean possuiLegenda;
@@ -11,19 +15,11 @@ public class Dvd extends Midia {
         System.out.println("Filme iniciado!");
     }
 
-    public Dvd(Midia midia, Idioma idioma, boolean possuiLegenda, IdiomaLegenda idiomaLegenda) {
-        super(midia.getCodigo(), midia.getPreco(), midia.getNome());
+    public Dvd(String codigo, Double preco, String nome, Idioma idioma, boolean possuiLegenda, IdiomaLegenda idiomaLegenda) {
+        super(codigo, preco, nome);
         this.idioma = idioma;
         this.possuiLegenda = possuiLegenda;
         this.idiomaLegenda = idiomaLegenda;
-    }
-
-    public Midia getMidia() {
-        return midia;
-    }
-
-    public void setMidia(Midia midia) {
-        this.midia = midia;
     }
 
     public Idioma getIdioma() {
@@ -53,9 +49,22 @@ public class Dvd extends Midia {
     public void legenda(boolean ligar, IdiomaLegenda idiomaLegenda){
         setPossuiLegenda(ligar);
         setIdiomaLegenda(idiomaLegenda);
+        if (!possuiLegenda){
+            System.out.println("Este filme não tem legenda!");
+        }
     }
 
     public void legenda(boolean ligarDesligar){
         setPossuiLegenda(ligarDesligar);
+        if (!possuiLegenda) {
+            System.out.println("Este filme não tem legenda!");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", em "
+                + idioma + ". Escolha da legenda: " +
+                idiomaLegenda ;
     }
 }
